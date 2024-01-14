@@ -14,7 +14,7 @@ lst=[11,12,13]
 #   File "D:\PYWORK\pylearn\94函数的参数总结.py", line 12, in <module>
 #     fun(lst)
 # TypeError: fun() missing 2 required positional arguments: 'b' and 'c'
-# 只传入一个参数，如果想正确，要在lst前加*，表示是可变的实参
+# 只传入一个参数，如果想正确，要在lst前加*，表示是可变的实参,这叫参数解包，适用于位置形参
 fun(*lst)  #在函数调用时，将列表中的每个元素都转化为位置实参传入
 # 11 12 13
 
@@ -35,7 +35,7 @@ TypeError: fun() missing 2 required positional arguments: 'b' and 'c'
 # 而在前面加上**便正确
 fun(**dic1)
 # 100 200 500
-# 所以如果想将字典转化为关键字实参需要在字典前加上**
+# 所以如果想将字典转化为关键字实参需要在字典前加上**，也是参数解包，适用于关键字实参
 
 
 
@@ -71,7 +71,6 @@ func4(c=0,b=3,d=1,a=2)
 func4(10,20,d=1,c=6) #前两个利用位置实参传递，后面两个按照关键字实参传递
 
 '''问题，若让c,d只能进行关键字传递，该如何定义函数'''
-
 # 答：在第一个要定义的关键字形参前加*
 def func5(a,b,*,c,d):
     print(a,b,c,d)

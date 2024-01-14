@@ -12,7 +12,7 @@ class Student:
     def eat(self): #定义实例方法
         print(self.name+'在吃饭')
 
-# 创建对象
+# 创建对象=类名(参数)
 stu1=Student('张三',20)
 stu2=Student('李四',30)
 
@@ -36,10 +36,16 @@ except BaseException as e:
 
 # 除了动态绑定属性以外，还可以动态绑定方法
 # 让stu1，stu2都调用eat()方法
-print(stu1.eat,stu2.eat)
+print(stu1.eat,stu2.eat)   #<--问题：为什么不写成stu1.eat() 因为不带括号调用的是整体，带括号调用的是结果
 # 张三在吃饭
 # 李四在吃饭
 # 发现两个实例对象都可以调用实例方法
+print(stu1.eat())
+# None
+
+stu3=Student('李武',20)
+print(Student.eat(stu3))
+print(stu3.eat())
 
 
 # 但是如何单独指定一个实例对象拥有另一个实例对象所不具有的方法发呢?
@@ -47,7 +53,7 @@ print(stu1.eat,stu2.eat)
 # 定义在类之外的，叫做函数
 def show():
     print('我将被绑定在stu2上，成为动态指定的方法')
-stu2.show=show() #<--语法格式 : 实例对象.动态指定的方法名=写好的备选函数
+stu2.show=show #<--语法格式 : 实例对象.动态指定的方法名=写好的备选函数
 # （相当于让只能蹲在外边吃饭的人当了小弟，可以进院子里吃饭)
 
 # 调用动态指定的实例方法
