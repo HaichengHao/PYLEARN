@@ -17,6 +17,8 @@ class Person:
 #定义Student类，继承Person类
 class Student(Person):
     def __init__(self,name,age,score):
+
+        # 先继承类中的属性
         super().__init__(name,age)
         self.score=score
     # 方法重写时如果还想调用父类中的方法，那就用super().方法名()继承
