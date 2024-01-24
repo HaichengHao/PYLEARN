@@ -18,4 +18,4 @@ re模块
 -re.match()方法
 用于从字符串的开始位置进行匹配，如果起始位置匹配成功，结果为Match对象，否则结果为None
 
-格式为re.match(pattern,string,flags=0)'''
+格式为re.match(pattern,string[,flags=0])'''

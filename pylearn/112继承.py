@@ -10,12 +10,14 @@ class 子类类名(父类1，父类2):
 '''
 如果一个类没有继承任何类，则默认继承object
 python支持多继承
-定义子类时，必须在其构造函数中调用父类的构造函数'''
+定义子类时，必须在其构造函数中调用父类的构造函数
+super().__init__(要继承父类的属性)
+super().父类中的方法名  继承父类中的方法，用在方法重写当中使用'''
 # 理解何为子类
 # 例如生物可以分为动物和植物，动物又可分为爬行动物、哺乳动物....
 
 # 定义父类
-class Person: #也可写为Person(object),若不写则
+class Person: #也可写为Person(object),若不写则默认继承object
     def __init__(self,name,age): #初始化方法 定义属性name和age
         self.name=name
         self.age=age
@@ -25,13 +27,16 @@ class Person: #也可写为Person(object),若不写则
 # 定义子类Student,继承Person
 class Student(Person):
     def __init__(self,name,age,score):
-        # 利用super()调用父类的方法
+        # 利用super()调用父类的属性
         super().__init__(name,age)
+        # 再指定子类拥有的新的属性成绩(score)
         self.score=score
 # 定义子类Teacher,继承Person
 class Teacher(Person):
     def __init__(self,name,age,teachofyears):
+        # 利用super()调用父类的属性
         super().__init__(name,age)
+        # 再指定子类Teacher拥有的属性教龄(teachofyears)
         self.teachofyears=teachofyears
 
 # 测试

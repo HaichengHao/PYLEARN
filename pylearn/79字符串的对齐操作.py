@@ -2,14 +2,14 @@
 # date: 2024/1/7 10:03
 '''
 字符串的对齐
-.center() 居中对齐，第一个参数指定宽度，第二个参数指定填充字符，第二个参数是可选的
+.center(width= [,fillchar=]) 居中对齐，第一个参数指定宽度，第二个参数指定填充字符，第二个参数是可选的
 ，默认是空格填充，如果设置宽度小于实际宽度则返回原字符串
 
-。ljust() 即left just 左对齐，第一个参数指定宽度，第二个参数指定填充符，第二个参数可选，同上
+.ljust(width= [,fillchar=]) 即left just 左对齐，第一个参数指定宽度，第二个参数指定填充符，第二个参数可选，同上
 
-.rjust() 即right just 右对齐，第一个参数指定宽度，第二个参数指定填充字符，同上
+.rjust(width= [,fillchar=]) 即right just 右对齐，第一个参数指定宽度，第二个参数指定填充字符，同上
 
-.zfill()  右对齐 zero fill 左边用0填充，该方法只接收一个参数，用于指定字符串的宽度，如果指定的宽度小于等于字符串的长度，则返回字符串本身
+.zfill(width= [,fillchar=])  右对齐 zero fill 左边用0填充，该方法只接收一个参数，用于指定字符串的宽度，如果指定的宽度小于等于字符串的长度，则返回字符串本身
 '''
 
 str1="i wander how , i wonder why ,yestoday you told me about..."

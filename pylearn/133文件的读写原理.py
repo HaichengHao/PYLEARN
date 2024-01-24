@@ -22,7 +22,7 @@ python程序通过内置函数open()创建文件对象（此对象映射磁盘�
 
 语法规则
 创建的文件对象名=open(文件名，模式，编码格式，行操作)
-file = open(filename,mode,encoding,newline)
+file = open(filename,mode[,encoding,newline])
 
 '''
 # 示例

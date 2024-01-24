@@ -20,6 +20,7 @@ class Student(Person):
 
         # 先继承类中的属性
         super().__init__(name,age)
+        # 再指定子类Student类才有的属性成绩(score)
         self.score=score
     # 方法重写时如果还想调用父类中的方法，那就用super().方法名()继承
     def info(self): #<--左边框中已有提示重写了Person类中的方法
@@ -29,8 +30,11 @@ class Student(Person):
 
 # 定义Teacher类，继承Person类
 class Teacher(Person):
-    def __init__(self,name,age,teachofyears):
+    # 初始化Teacher
+    def __init__(self,name,age,teachofyears): #指定其拥有的属性
+        # 继承父类Person的属性
         super().__init__(name,age)
+        # 再指定其拥有的属性教龄(teachofyears)
         self.teachofyears=teachofyears
 #         方法重写，要求输出父类中所不具备的教龄teachofyears
     def info(self):

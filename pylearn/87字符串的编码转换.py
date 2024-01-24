@@ -9,10 +9,10 @@ s1='海内存知己'
 # 编码
 print(s1.encode(encoding='GBK'))
 # b'\xba\xa3\xc4\xda\xb4\xe6\xd6\xaa\xbc\xba'
-# 一个汉字占两个字节，前面的b代表转化成二进制
+# GBK一个汉字占两个字节，前面的b代表转化成二进制
 print(s1.encode(encoding='utf-8'))
 # b'\xe6\xb5\xb7\xe5\x86\x85\xe5\xad\x98\xe7\x9f\xa5\xe5\xb7\xb1'
-
+# utf-8一个汉字占三个字节
 #解码
 byte_data=s1.encode(encoding='gbk')
 print(byte_data.decode(encoding='gbk'))

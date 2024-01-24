@@ -32,8 +32,8 @@ vh.engine()
 # Audi	engine starting <--奥迪的引擎正在启动
 print(vh.brand)
 # Audi <--输出车的品牌
-print(vh.show)
-print(vh.brand)
+vh.show()
+# 8888 <--输出了id_info
 
 # 尝试输出只能在类对象内才能访问的__id_info属性
 try:

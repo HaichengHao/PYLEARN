@@ -3,7 +3,7 @@
 '''
 re.match()方法，用于从字符串的开始位置进行匹配，如果起始位置匹配成功，结果为Match对象，否则为None
 '''
-# 用法re.match(pattern,string,flags=0)
+# 用法re.match(pattern,string[,flags=0])
 # pattern -规则
 # string -待检测的字符串
 # flag -标志位

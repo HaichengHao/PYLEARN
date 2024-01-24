@@ -1,7 +1,7 @@
 # editor 百年
 # date: 2024/1/17 16:48
 '''
-re.findall(pattern,string,flag=0)
+re.findall(pattern,string[,flag=0])
 用在整个字符串中搜索所有符合正则表达式的值，结果为列表,若不匹配，返回的是空列表
 '''
 # 待检验的字符串

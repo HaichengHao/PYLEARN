@@ -34,9 +34,13 @@ def fun(obj):
 
 # 调用函数fun()
 fun(Animal())
+# 相当于Animal().eat()
 fun(Cat())
+# 相当于Cat().eat()
 fun(Dog())
+# 相当于Dog().eat()
 fun(Human())
+# 相当于Human().eat()
 # 动物吃
 # 猫吃鱼
 # 狗会吃骨头
