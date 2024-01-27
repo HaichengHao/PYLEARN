@@ -2,6 +2,7 @@
 # time: 2024/1/26 11:39
 # 定义要保存成的文件
 # file_name='stu_info.txt'
+import os.path
 file_name='D:/PYWORK/python_cases/1学生信息管理系统/SIMS_ver1.0/stu_info.txt'
 # 定义主函数
 func_lst = [i for i in range(0,8)]
@@ -97,7 +98,28 @@ def search():
     pass
 # 3
 def delete():
-    pass
+    while True:
+        stu_id=input('请输入要删除学生的id:')
+        if stu_id!='':
+            if os.path.exists(file_name):
+                with open(file_name,'r',encoding='utf-8') as fp:
+                    # 将读取到的数据保存为一个列表stu_info_old
+                    stu_info_old=fp.readlines()
+            else:
+                stu_info_old=[]
+            flag=False #标记是否删除，默认没有删除
+            if stu_info_old: #相当于True
+                with open(file_name,'w',encoding='utf-8') as wfp:
+                    # 创建空字典d
+                    d={}
+                    # 遍历列表中的元素(之前在insert()模块中知道它的元素是一个个字典)
+                    for item in stu_info_old:
+                        d=dict(eval(item)) #将字符串转化为字典
+                        if d['id']!=stu_id : #如果字典中的id确实存在于文件之中
+                            wfp.write(str(d)+'\n')
+                        else:
+                            flag=True
+
 # 4
 def modify():
     pass
