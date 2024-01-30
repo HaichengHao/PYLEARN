@@ -9,7 +9,7 @@
 
 ## 项目目录结构
 
-![项目目录结构](D:\PYWORK\python_cases\1学生信息管理系统\文件结构.png)
+![项目目录结构](.\文件结构.png)
 
 ## 需求分析
 
@@ -23,15 +23,15 @@
 
 ## 系统设计
 
-![SIMS结构图](D:\PYWORK\python_cases\1学生信息管理系统\SIMS_structure_chart.png)
+![SIMS结构图](.\SIMS_structure_chart.png)
 
 ## 系统业务流程
 
-![SIMS业务流程](D:\PYWORK\python_cases\1学生信息管理系统\SIMS业务流程.png)
+![SIMS业务流程](.\SIMS业务流程.png)
 
 ## 主函数设计
 
-![SIMS主函数设计](D:\PYWORK\python_cases\1学生信息管理系统\SIMS主函数设计.png)
+![SIMS主函数设计](.\SIMS主函数设计.png)
 
 > ### 实现主函数
 
@@ -51,7 +51,7 @@
 
 1. 实现从控制台录入学生信息，并将信息保存到磁盘文件当中
 
-> ![录入学生信息实现](D:\PYWORK\python_cases\1学生信息管理系统\SIMS录入学生信息实现.png)
+> ![录入学生信息实现](.\SIMS录入学生信息实现.png)
 > 具体实现
 >
 >> save()函数，用于将学生信息保存到文件
@@ -59,20 +59,20 @@
 >>
 2. 实现查询学生信息功能
 > 从控制台录入学生ID或姓名，到磁盘文件中找到对应的学生信息
-> ![查询_统计实现](D:\PYWORK\python_cases\1学生信息管理系统\SIMS查询_统计模块设计.png)
+> ![查询_统计实现](.\SIMS查询_统计模块设计.png)
 >具体实现
 >> 编写主函数中调用的查找学生信息的函数search()
 >> 定义显示查询结果的函数show_student(query_student)
 
 3.实现从控制台找到学生信息，并将其删除
-> ![删除信息实现](D:\PYWORK\python_cases\1学生信息管理系统\SIMS删除模块.png)
+> ![删除信息实现](.\SIMS删除模块.png)
 >具体实现 
 >> 编写主函数中调用的修改学生信息的函数modify()
 >> 调用了show()函数显示学生信息
 
 4.实现修改学生信息功能
 > 从控制台录入学生ID，到磁盘文件中找到对应的学生信息，将其进行修改
-> ![修改学生信息实现](D:\PYWORK\python_cases\1学生信息管理系统\SIMS修改学生信息.png)  
+> ![修改学生信息实现](.\SIMS修改学生信息.png)  
 
 
 ## 项目打包

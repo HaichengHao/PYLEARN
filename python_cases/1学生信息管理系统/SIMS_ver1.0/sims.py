@@ -7,7 +7,7 @@ file_name='D:/PYWORK/python_cases/1学生信息管理系统/SIMS_ver1.0/stu_info
 # 定义主函数
 func_lst = [i for i in range(0,8)]
 def main():
-    while True:
+    while True:#循环执行
         menu()
         choice=int(input('请选择功能:'))
         if choice in func_lst:
@@ -56,7 +56,7 @@ def save(lst):
         # fp=open('D:/PYWORK/python_cases/1学生信息管理系统/SIMS_ver1.0/stu_info.txt','w',encoding='utf-8')
         fp=open(file_name,'w',encoding='utf-8')
     for item in lst: #遍历列表中的每个学生的信息（字典形式）并写入到文件当中并换行
-        fp.write(str(item)+'\n')
+        fp.write(str(item)+'\n') #将每个学生信息的字典写入到列表当中并换行，这样方便后续的查找工作
         #关闭文件
     fp.close()
 
@@ -97,16 +97,22 @@ def insert():
 
 # 2
 def search():
+    # 创建一个空列表用于接收数据
     stu_query=[]
+    # 循环执行
     while True:
+        # 创建id,name
         id=''
         name=''
+        # 如果文件存在
         if os.path.exists(file_name):
+            # 定义查找模式mode,可按id和姓名进行自定义查询
             mode=input('按ID查找请按1，按姓名查找请按2:')
             if mode == '1':
                 id=input('请输入要查找的学生的ID:')
             elif mode =='2':
-                    print('请输入学生的姓名:')
+                name=input('请输入学生的姓名:')
+            # 如果均未查找到，则输出提示信息有误无法查询
             else:
                 print('所输入的信息无法识别，请重新输入')
                 search() #如果输入有误，则重新调用自己
@@ -114,15 +120,15 @@ def search():
                 stu_info=rfp.readlines()
                 for item in stu_info:
                     d=dict(eval(item))
-                    if id!='':
-                        if d['id']==id: #如果查找到对应的ID
-                            stu_query.append(d) #就将其加入到创建的列表stu_query当中
+                    if id!='': #如果输入的id不为空
+                        if d['id']==id: #且查找到对应的ID
+                            stu_query.append(d) #就将这一字典加入到创建的列表stu_query当中
 
 
-                    elif name!='':
-                        if d['姓名']==name:
-                            stu_query.append(d)
-        #     显示查询结果(方案1)
+                    elif name!='': #如果输入的姓名不为空，
+                        if d['姓名']==name:#且找到对应的姓名
+                            stu_query.append(d)#就将这一字典加入到创建的列表stu_query当中
+        #     显示查询结果(方案1)，简单，但也简陋
         #     print(stu_query)
         #     answer=input('是否继续查找(y/n)?')
         #     if answer=='y' or answer == 'Y':
@@ -130,9 +136,10 @@ def search():
         #         continue
         #     elif answer=='n' or answer =='N':
         #         break
+
         # 方案2，调用自己编写的函数show_student()
             show_student(stu_query)
-            stu_query.clear() #查询时防止有冗余的数据，对其进行清空
+            stu_query.clear() #查询时防止有冗余的数据，展示完查找到的信息后对其进行清空，以免出现上次查找的结果
             answer=input('是否继续查询？(y/n)')
             if answer == 'y' or answer =='Y':
                 continue
@@ -172,7 +179,7 @@ def delete():
                     # emp_d={}
                     # 遍历列表中的元素(之前在insert()模块中知道它的元素是一个个字典)
                     for item in stu_info_old:
-                        d=dict(eval(item))
+                        d=dict(eval(item))  #空字典
                         #将读取到的字符串转化为字典类型
                         # 这里注意，因为从文件中读取到的虽然貌似是字典，但其实在文件处理器看来就是字符串，
                         # eval()可以将 "{'id': '1020', '姓名': '柳传至', '语文': 100, '数学': 100, '英语': 20}"
@@ -247,12 +254,20 @@ def total():
 # 7
 def show():
     pass
+
+# 定义一个函数显示读取到的学生信息列表
 def show_student(lst):
-    if len(lst)==0:
+    if len(lst)==0: #如果lst长度为0(即未读取到)
         print('没有查询到信息，无数据显示!!')
         return
-    #定义显示格式
-    format_title='{:^6\t{:}}'
+    #定义标头显示格式
+    format_title='{:^6}\t{:^12}\t{:^8}\t{:^8}\t{:^8}\t{:^10}'
+    print(format_title.format('id','姓名','语文','数学','英语','总成绩'))
+    #定义内容的显示格式
+    format_data='{:^6}\t{:^12}\t{:^10}\t{:^10}\t{:^10}\t{:^10}'
+    for item in lst:
+        print(format_data.format(item.get('id'),item.get('姓名'),item.get('语文'),item.get('数学'),item.get('英语'),
+                                 int(item.get('语文')+item.get('数学')+item.get('英语'))))
 
 
 
