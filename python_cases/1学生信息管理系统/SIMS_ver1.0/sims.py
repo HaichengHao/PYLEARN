@@ -95,7 +95,7 @@ def insert():
 
 
 
-# 2
+# 2实现查找学生信息功能
 def search():
     # 创建一个空列表用于接收数据
     stu_query=[]
@@ -245,15 +245,74 @@ def modify():
 
 
 
-# 5
+# 5实现对学生信息进行排序的功能
 def sort():
-    pass
-# 6
+    # show() #调用show()展示学生信息
+    if os.path.exists(file_name): #如果文件存在
+        with open(file_name,'r',encoding='utf-8') as rfp:#则以只读方式打开文件
+            stu_info=rfp.readlines()#并将读取到的数据(列表中的元素，即每个学生的字典)
+        stu_info_new=[] #创建空列表用于接收信息
+        for item in stu_info:#遍历列表stu_info中的元素
+            d=dict(eval(item))#并将元素的字符串类型转化为字典类型(tips:eval()“去皮”)
+            stu_info_new.append(d) #并将其新增到列表当中
+    else:#否则
+        print('文件不存在')#输出文件不存在
+        return
+    asc_or_desc=input('请选择排序方式(0升序，1降序):') #定义选项
+    if asc_or_desc=='0':
+        asc_or_desc_bool=False #定义标志位，如果选0则表示false
+    elif asc_or_desc=='1':
+        asc_or_desc_bool=True #如果选1则标志True
+    else:
+        print('您的输入有误，请重新输入')
+        sort()
+    mode=input('请选择排序方式(1.语文，2.数学，3.英语，0.总成绩):')
+    # 利用匿名函数获取列表中元素(字典)中的指定的键的值
+    if mode=='1':
+        stu_info_new.sort(key=lambda x :int(x['语文']),reverse=asc_or_desc_bool)
+    elif mode=='2':
+        stu_info_new.sort(key=lambda x :int(x['数学']),reverse=asc_or_desc_bool)
+    elif mode=='3':
+        stu_info_new.sort(key=lambda x :int(x['英语']),reverse=asc_or_desc_bool)
+    elif mode=='0':
+        stu_info_new.sort(key=lambda x :int(x['语文']+x['数学']+x['英语']),reverse=asc_or_desc_bool)
+    else:
+        print('输入有误，请重新输入，您输入的是{0}'.format(mode))
+        sort() #有误后，再次调用
+    show_student(stu_info_new) #调用show_student()展示学生信息
+
+# 6实现统计学生总人数功能
 def total():
-    pass
-# 7
+    if os.path.exists(file_name):
+        with open(file_name,'r',encoding='utf-8') as rfp:
+            students=rfp.readlines()
+            if students!='':#如果列表不为空
+                print('一共有{0}名学生'.format(len(students))) #则调用len()方法获取列表长度
+    #             为什么要用len()，因为列表内的元素是一个个字典，即一条字典就是一个元素，利用len()便可获取有多少个元素，即多少个学生
+            else:
+                print('没有学生数据')
+
+    else:
+        print('没有学生数据')
+
+
+# 7实现展示学生信息的功能
 def show():
-    pass
+    # 创建空列表用于接收数据
+    stu_lst=[]
+    if os.path.exists(file_name):#判断文件是否存在
+        with open(file_name,'r',encoding='utf-8') as rfp:#如果文件存在
+            stu_info=rfp.readlines()#则以只读方式读取文件并调用readliines()方法，返回的就是一个列表
+            for item in stu_info:#对列表中的元素进行遍历，
+                d=dict(eval(item)) #之后将列表中的每个元素（即字符串格式的字典）转化为字典格式
+                stu_lst.append(d)#之后新增到列表stu_lst之中去
+        if stu_lst!='':#如果列表不为空,
+            show_student(stu_lst) #就调用show_student()函数将信息展示出来
+
+
+
+    else:
+        print('暂未保存学生数据')
 
 # 定义一个函数显示读取到的学生信息列表
 def show_student(lst):
