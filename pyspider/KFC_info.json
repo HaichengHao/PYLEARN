@@ -1,0 +1,337 @@
+{
+  "Table": [
+    {
+      "rowcount": 837
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 1,
+      "storeName": "前门",
+      "addressDetail": "前门西大街正阳市场1号楼中部",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 2,
+      "storeName": "京源",
+      "addressDetail": "左家庄新源街24号",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 3,
+      "storeName": "东大桥",
+      "addressDetail": "朝外大街东大桥路1号楼",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 4,
+      "storeName": "方庄",
+      "addressDetail": "蒲芳路26号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 5,
+      "storeName": "安定门",
+      "addressDetail": "安定门外大街西河沿13号楼",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 6,
+      "storeName": "航天桥",
+      "addressDetail": "阜成路51-2",
+      "pro": "24小时,店内参观",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 7,
+      "storeName": "展览路(德宝)",
+      "addressDetail": "西外大街德宝新园14号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 8,
+      "storeName": "劲松",
+      "addressDetail": "劲松4区401楼",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 9,
+      "storeName": "西罗园",
+      "addressDetail": "西罗园4区南二段",
+      "pro": "24小时,店内参观,礼品卡,手机点餐",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 10,
+      "storeName": "蓝桥",
+      "addressDetail": "蓝桥餐厅工体北路11－1号",
+      "pro": "24小时,Wi-Fi,点唱机,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 11,
+      "storeName": "六里桥",
+      "addressDetail": "太平桥西里甲1号",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 12,
+      "storeName": "万惠",
+      "addressDetail": "金台里甲15号",
+      "pro": "24小时,Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 13,
+      "storeName": "团结湖",
+      "addressDetail": "团结湖路7号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 14,
+      "storeName": "花园路",
+      "addressDetail": "花园北路44号贯通大厦一层",
+      "pro": "24小时,Wi-Fi,点唱机,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 15,
+      "storeName": "新街口",
+      "addressDetail": "新街口北大街50号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 16,
+      "storeName": "酒仙桥",
+      "addressDetail": "酒仙桥中路12号乐天玛特一层",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 17,
+      "storeName": "华南大厦",
+      "addressDetail": "西单北大街178华南大厦B1层",
+      "pro": null,
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 18,
+      "storeName": "国展",
+      "addressDetail": "静安西街10号国展宾馆一层",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 19,
+      "storeName": "宣武门（四号线G口）",
+      "addressDetail": "宣武门东大街24号越秀饭店西配楼一层",
+      "pro": "24小时,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 20,
+      "storeName": "建华",
+      "addressDetail": "王府井大街192号",
+      "pro": "礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    }
+  ]
+}{
+  "Table": [
+    {
+      "rowcount": 837
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 21,
+      "storeName": "地安门",
+      "addressDetail": "地安门外大街178号",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 22,
+      "storeName": "清河",
+      "addressDetail": "清河毛纺路南甲36号金五星商业大厦",
+      "pro": "店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 23,
+      "storeName": "东单",
+      "addressDetail": "东城区东单北大街63号",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 24,
+      "storeName": "朝阳门",
+      "addressDetail": "朝阳门外大街19号华普大厦（一层东侧）",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 25,
+      "storeName": "通州",
+      "addressDetail": "通州新华大街84号",
+      "pro": "Wi-Fi,点唱机,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 26,
+      "storeName": "海淀镇",
+      "addressDetail": "海淀街道草场1号",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 27,
+      "storeName": "崇文门",
+      "addressDetail": "崇文门外大街3号新世界商场一期北侧一层",
+      "pro": "Wi-Fi,点唱机,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 28,
+      "storeName": "苏州桥(紫金大厦一层）",
+      "addressDetail": "万泉河路68号紫金大厦一层北侧",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 29,
+      "storeName": "双榆树",
+      "addressDetail": "北三环西路48号1#楼FA8商铺",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 30,
+      "storeName": "天坛东路",
+      "addressDetail": "天坛东路甲48号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 31,
+      "storeName": "紫竹桥",
+      "addressDetail": "海淀区北洼路4号",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 32,
+      "storeName": "大兴",
+      "addressDetail": "黄村卫星城兴丰街15号，星城商厦一层北侧",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 33,
+      "storeName": "昌平（新世纪商城）",
+      "addressDetail": "新世纪商城鼓楼南大街",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 34,
+      "storeName": "和平里",
+      "addressDetail": "和平里6区6号楼",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 35,
+      "storeName": "北太平庄",
+      "addressDetail": "北三环中路49号",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 36,
+      "storeName": "松榆里",
+      "addressDetail": "松榆里28号楼松榆里商场一层北侧",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 37,
+      "storeName": "白石桥",
+      "addressDetail": "白石桥路甲54号家乐福超市一层西侧",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 38,
+      "storeName": "右安门",
+      "addressDetail": "右安门大街2号迦南公寓C座一层西部",
+      "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 39,
+      "storeName": "魏公村",
+      "addressDetail": "魏公村路5号",
+      "pro": "Wi-Fi,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    },
+    {
+      "rownum": 40,
+      "storeName": "阳光广场",
+      "addressDetail": "安立路68号阳光广场一层西门北侧",
+      "pro": "店内参观,礼品卡",
+      "provinceName": "北京市",
+      "cityName": "北京市"
+    }
+  ]
+}
