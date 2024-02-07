@@ -1,2 +1,3 @@
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple <--永久
 pip install lxml -i https://pypi.tuna.tsinghua.edu.cn/simple  <--临时
+注意，一定要安装到python环境的script文件下
