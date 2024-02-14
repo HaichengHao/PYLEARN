@@ -46,4 +46,5 @@ print(obj)
 总结
 1.post请求的参数必须编码，编码之后，仍需调用encode()方法，encode_data=urllib.parse.urlencode(data).encode('utf-8')
 2.参数是放在请求对象定制的方法中 request=urllib.request.Request(url=base_url,data=encode_data,headers=headers)
-3.编码之后必须调用encode()'''
+3.编码之后必须调用encode()
+4.json文件可以利用ctrl+alt+l 组合键位置进行规整，方便阅读'''

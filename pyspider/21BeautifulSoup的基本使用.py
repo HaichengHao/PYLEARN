@@ -25,6 +25,7 @@ response=urllib.request.urlopen(request)
 content=response.read().decode('utf-8')
 # 默认的文件格式是gbk,所以要指定编码
 soup=BeautifulSoup(content,'lxml')
+soup_2=BeautifulSoup(open('./21bs4的基本使用.html',encoding='utf-8'),'lxml')
 # print(soup)
 print(soup.a)
 # <a class="logo-img" href="https://huke88.com/" id="navNewPublicLogo"><span>虎课网-专注职业教育</span></a>
@@ -165,7 +166,7 @@ print(soup.select('a,li'))
 2) 节点的属性
     tag.name 获取标签名  eg: tag.find('li')   tag.attrs将属性值作为一个字典返回
 3) 获取节点的属性
-    obj.attrs.get('title')
+    obj.attrs.get('title') 注意:attrs返回的是一个字典，所以利用字典中的.get('key'[,default])可以获取指定key的value,并且通过get取值法可以指定默认参数，如果没取到不会报错
     obj.get('title')
     obj['title']
     '''
@@ -177,6 +178,20 @@ print(info)
 
 # 获取节点的属性
 # 通过id获取p标签
-
-obj=soup.select('#a')
+print(soup_2)
+obj=soup_2.select('#p1')[0]
 print(obj)
+'''
+<p class="p1" id="p1">呵呵呵</p>
+</body>
+</html>
+<p class="p1" id="p1">呵呵呵</p>
+'''
+print(obj.attrs.get('class'))
+# ['p1']
+# 也可以这样
+print(obj.get('class'))
+# ['p1'] <--但是这种方式不太稳妥
+print(obj.attrs.get('title',"没有找到"))
+# 没有找到 观察obj可以发现其确实没有title
+
