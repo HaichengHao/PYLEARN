@@ -1,0 +1,64 @@
+[INFO  - 2024-02-15T02:18:34.294Z] GhostDriver - Main - running on port 59093
+[INFO  - 2024-02-15T02:18:38.714Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2024-02-15T02:18:38.714Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.customHeaders:  - {}
+[INFO  - 2024-02-15T02:18:38.714Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2024-02-15T02:18:38.714Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 87b95b40-cba8-11ee-b7d2-eb59062ad1f6
+[ERROR - 2024-02-15T02:18:41.194Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - msg: ReferenceError: Can't find variable: Promise
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:41.194Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - stack:
+  generateAnimate (https://pss.bdstatic.com/static/superman/js/components/ai-talk-switch-c2572e6a36.js:21)
+  initBubbleEntry (https://pss.bdstatic.com/static/superman/js/components/ai-talk-switch-c2572e6a36.js:27)
+  init (https://pss.bdstatic.com/static/superman/js/components/ai-talk-switch-c2572e6a36.js:32)
+  (anonymous function) (https://pss.bdstatic.com/static/superman/js/components/ai-talk-switch-c2572e6a36.js:14)
+  tryFinishRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  nativeAsyncRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  (anonymous function) (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:26)
+  tryFinishRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  modDefined (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:14)
+  invokeFactory (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:12)
+  modTryInvokeFactory (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:13)
+  modAutoDefine (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:10)
+  loaded (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:17)
+  innerOnload (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:32)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:49.069Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 't.scrollTo({left:r,behavior:"auto"})')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:49.069Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - stack:
+  scrollToIndex (https://pss.bdstatic.com/r/www/cache/static/molecules/app/search-tag/result_c37e976.js:1)
+  (anonymous function) (https://pss.bdstatic.com/r/www/cache/static/molecules/app/search-tag/result_c37e976.js:1)
+  Xt (https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_8c3cd47.js:944)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:49.127Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - msg: ReferenceError: Can't find variable: Promise
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:49.127Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - stack:
+  __awaiter (https://pss.bdstatic.com/r/www/cache/static/protocol/https/bundles/polyfill_9354efa.js:48)
+  initInvokeInfo (https://pss.bdstatic.com/r/www/cache/static/aladdin-san/app/recommend_list/result_6b5afc7.js:1)
+  c (https://pss.bdstatic.com/r/www/cache/static/aladdin-san/app/recommend_list/result_6b5afc7.js:1)
+  c (:0)
+  (anonymous function) (https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_8c3cd47.js:220)
+  tryFinishRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  nativeAsyncRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  (anonymous function) (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:26)
+  tryFinishRequire (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:15)
+  modDefined (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:14)
+  invokeFactory (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:12)
+  modTryInvokeFactory (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:13)
+  modAutoDefine (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:10)
+  loaded (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:17)
+  innerOnload (https://pss.bdstatic.com/static/superman/js/lib/esl-d776bfb1aa.js:32)
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:54.652Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - msg: TypeError: undefined is not a constructor (evaluating 't.scrollTo({left:r,behavior:"auto"})')
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2024-02-15T02:18:54.652Z] Session [87b95b40-cba8-11ee-b7d2-eb59062ad1f6] - page.onError - stack:
+  scrollToIndex (https://pss.bdstatic.com/r/www/cache/static/molecules/app/search-tag/result_c37e976.js:1)
+  (anonymous function) (https://pss.bdstatic.com/r/www/cache/static/molecules/app/search-tag/result_c37e976.js:1)
+  Xt (https://pss.bdstatic.com/r/www/cache/static/protocol/https/global/js/all_async_search_8c3cd47.js:944)
+
+  phantomjs://platform/console++.js:263 in error
