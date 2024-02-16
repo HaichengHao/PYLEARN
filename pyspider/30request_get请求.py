@@ -45,8 +45,10 @@ data={
 # params 参数
 # 注意，requests直属于python，相对于urllib,它不需要对data进行encode操作
 
-response=requests.get(url=url,headers=headers,data=data)
+response=requests.get(url=url,headers=headers,params=data)
 response.encoding='utf-8'
 content=response.text
 print(content)
+with open('./nsp.html','a+',encoding='utf-8') as wfp:
+    wfp.write(content)
 
