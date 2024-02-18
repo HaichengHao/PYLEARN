@@ -17,7 +17,23 @@ response=requests.get(url=url,headers=headers,proxies=proxies)
 content=response.text
 tree=etree.HTML(content)
 ips=tree.xpath('//td[1]/text()')
+ports=tree.xpath('//td[2]/text()')
 print(ips)
-soup=BeautifulSoup(content,'lxml')
-td=soup.find_all('td')
-print(td)
+print(ports)
+my_ip=[]
+my_port=[]
+for i in range(0,len(ips)):
+    new_ips=ips[i].replace('\n\t\t\t','').replace('\t\t','')
+    new_ports=ports[i].replace('\n\t\t\t','').replace('\t\t','')
+    my_ip.append(new_ips)
+    my_port.append(new_ports)
+print(my_ip,my_port)
+
+my_proxy=[]
+for x,y in zip(my_ip,my_port):
+    prox_sock='{\''+'http\''+':'+'\''+x+':'+y+'\''+'}'
+    my_proxy.append(prox_sock)
+
+print(my_proxy)
+for prox in my_proxy:
+    print(prox+',')
