@@ -1,0 +1,16 @@
+1.创建爬虫的项目
+scrapy startproject xxx 注意不允许数字开头，也不能包含中文
+2.到 xxx\spiders文件中创建爬虫文件
+    - cd 项目名\项目名\spiders
+3.创建爬虫文件
+    -scrapy genspider 爬虫文件的名字 要爬取的网页的url
+    eg:scrapy genspider baiduinfo www.baidu.com (一般情况下不需要写协议)
+    因为start_urls的值是根据allowed_domains修改的，所以添加了http的话，那么start_urls就需要我们手动去修改了
+4.运行爬虫代码
+    -scrapy crawl 爬虫的名字
+    eg: cd 'D:\PYWORK\pyspider\a01_scrapy_baidu\a01_scrapy_baidu\spiders '
+    scrapy crawl baiduinfo
+    运行发现错误，因为君子协议robots.txt
+    解决方案：去scrapy 项目名称的 settings.py文件夹下修改将ROBOTSTXT_OBEY=TRUE注释掉
+    再次运行，发现成功
+    如果报错没有attrs模块的话就pip install -upgrade attrs

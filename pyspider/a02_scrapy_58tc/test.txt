@@ -1,0 +1,17 @@
+1.scrapy 项目的结构
+    项目名
+        >项目名
+            > spiders文件夹
+                >__init__.py （存储的是爬虫文件）
+                > 自定义的爬虫文件.py (自定义的核心功能文件) ***
+            >__init__.py
+            >items.py (定义数据结构的地方)
+            >middlewares.py (中间件) 如代理机制之后将在这个文件中定义
+            >piplines.py (管道) 用来处理下载的数据
+            >settings.py (配置文件) 君子协议 ua定义等
+2.response的属性和方法
+    response.text 获取的是响应的字符串
+    response.body 获取的是二进制数据
+    response.xpath 可以直接使用xpath方法来解析response中的内容
+    response.extract() 提取selector 对象的data属性值
+    response.extract_first()提取的selector列表的第一个数据

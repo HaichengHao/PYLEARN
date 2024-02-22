@@ -60,6 +60,6 @@ print(content)
 
 tree=etree.HTML(content)
 goods_info=tree.xpath('//div[@class="tb-recommend-content clearfix"]/div[@class="tb-recommend-content-item"][1]/a/div[@class="info-wrapper"]/div[@class="title"]/text()')
-print(goods_info)
+print(goods_info.extract())  #
 
 
