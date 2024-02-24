@@ -62,9 +62,10 @@ NEWSPIDER_MODULE = "a03_scrapy_ddw.spiders"
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    "a03_scrapy_ddw.pipelines.A03ScrapyDdwPipeline": 300,
-#}
+ITEM_PIPELINES = {
+   #  管道可以有很多个，管道是有优先级的，值越小，优先级越高，范围是1-100
+   "a03_scrapy_ddw.pipelines.A03ScrapyDdwPipeline": 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
