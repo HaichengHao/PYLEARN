@@ -1,4 +1,4 @@
-# Scrapy settings for a03_scrapy_ddw project
+# Scrapy settings for a04_scrapy_dytt project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "a03_scrapy_ddw"
+BOT_NAME = "a04_scrapy_dytt"
 
-SPIDER_MODULES = ["a03_scrapy_ddw.spiders"]
-NEWSPIDER_MODULE = "a03_scrapy_ddw.spiders"
+SPIDER_MODULES = ["a04_scrapy_dytt.spiders"]
+NEWSPIDER_MODULE = "a04_scrapy_dytt.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "a03_scrapy_ddw (+http://www.yourdomain.com)"
+#USER_AGENT = "a04_scrapy_dytt (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 # ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ NEWSPIDER_MODULE = "a03_scrapy_ddw.spiders"
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "a03_scrapy_ddw.middlewares.A03ScrapyDdwSpiderMiddleware": 543,
+#    "a04_scrapy_dytt.middlewares.A04ScrapyDyttSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "a03_scrapy_ddw.middlewares.A03ScrapyDdwDownloaderMiddleware": 543,
+#    "a04_scrapy_dytt.middlewares.A04ScrapyDyttDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -62,11 +62,9 @@ NEWSPIDER_MODULE = "a03_scrapy_ddw.spiders"
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-ITEM_PIPELINES = {
-   #  管道可以有很多个，管道是有优先级的，值越小，优先级越高，范围是1-100
-   "a03_scrapy_ddw.pipelines.A03ScrapyDdwPipeline": 300,
-   "a03_scrapy_ddw.pipelines.DangpicDownloadPipeline":301
-}
+#ITEM_PIPELINES = {
+#    "a04_scrapy_dytt.pipelines.A04ScrapyDyttPipeline": 300,
+#}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

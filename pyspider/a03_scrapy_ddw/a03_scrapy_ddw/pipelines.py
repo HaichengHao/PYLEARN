@@ -32,3 +32,17 @@ class A03ScrapyDdwPipeline:
     def close_spider(self,spider):
         print('--------------')
         self.fp.close()
+
+
+# 多条管道同时开启
+# 1定义管道类
+# 2在settings里开启多管道
+
+import urllib.request
+class DangpicDownloadPipeline:
+    def process_item(self, item, spider):
+        picurl=item.get('src')
+        filename='./bookpic/'+item.get('name')+'.jpg'
+        urllib.request.urlretrieve(url=picurl,filename=filename)
+
+        return item

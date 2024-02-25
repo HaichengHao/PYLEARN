@@ -3,9 +3,13 @@ from a03_scrapy_ddw.items import A03ScrapyDdwItem
 
 class DdwSpider(scrapy.Spider):
     name = "ddw"
-    allowed_domains = ["http://category.dangdang.com/pg1-cp01.03.41.00.00.00.html"]
+    # 注意如果是多页下载的话一定要修改允许的域名范围
+    allowed_domains = ["category.dangdang.com"]
     start_urls = ["http://category.dangdang.com/pg1-cp01.03.41.00.00.00.html"]
 
+
+    base_url='http://category.dangdang.com/pg'
+    page=1
     def parse(self, response):
         # 开启pipline 进行数据下载
         # items 用来定义数据结构（即要下载的数据都有什么）
@@ -30,9 +34,9 @@ class DdwSpider(scrapy.Spider):
 
             # 第一张图片和其他的图片的标签的属性是不一样的
             # 第一张图片的src是可以使用的  其他的图片的地址是data-original
-            if src: #如果是li.xpath('.//img/@data-original').extract_first()
-                src = 'http:'+src #那就保持不变
-            else: #如果不是
+            if src: #如果是li.xpath('.//img/@data-original').extract_first() 即如果不为空值None
+                src = 'http:'+src #那就保持不变(并拼接上协议)
+            else: #如果为空
                 # /img/@src
                 src = 'http:'+li.xpath('.//img/@src').extract_first() #那就新定义一个访问到src
             name=li.xpath('.//img/@alt').extract_first()#相当于//ul[@class="bigimg"]/li + //img/@alt
@@ -49,3 +53,15 @@ class DdwSpider(scrapy.Spider):
 #             上面的代码中创建了book对象调用items中的方法将其定义
 #             每生成book对象就把对象交给piplines
             yield book
+
+#             每一页爬取的业务逻辑都是一样的，只需要再次让每一页的请求调用parse就行
+        if self.page<3:
+            self.page+=1
+            url=self.base_url+str(self.page)+'-cp01.03.41.00.00.00.html'
+
+            # 难点在于如何调用parse方法
+            # scrapy.Request就是Scrapy 的 get请求
+            # url 就是请求地址
+            # callback就是要执行的那个函数，注意不允许加'()'
+            # 核心是递归调用了parse方法
+            yield scrapy.Request(url=url,callback=self.parse)
