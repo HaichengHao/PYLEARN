@@ -1,4 +1,4 @@
-# Scrapy settings for a04_scrapy_dytt project
+# Scrapy settings for b01_scrapy_crawlspider_dsw project
 #
 # For simplicity, this file contains only settings considered important or
 # commonly used. You can find more settings consulting the documentation:
@@ -7,14 +7,14 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "a04_scrapy_dytt"
+BOT_NAME = "b01_scrapy_crawlspider_dsw"
 
-SPIDER_MODULES = ["a04_scrapy_dytt.spiders"]
-NEWSPIDER_MODULE = "a04_scrapy_dytt.spiders"
+SPIDER_MODULES = ["b01_scrapy_crawlspider_dsw.spiders"]
+NEWSPIDER_MODULE = "b01_scrapy_crawlspider_dsw.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = "a04_scrapy_dytt (+http://www.yourdomain.com)"
+#USER_AGENT = "b01_scrapy_crawlspider_dsw (+http://www.yourdomain.com)"
 
 # Obey robots.txt rules
 # ROBOTSTXT_OBEY = True
@@ -45,13 +45,13 @@ NEWSPIDER_MODULE = "a04_scrapy_dytt.spiders"
 # Enable or disable spider middlewares
 # See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 #SPIDER_MIDDLEWARES = {
-#    "a04_scrapy_dytt.middlewares.A04ScrapyDyttSpiderMiddleware": 543,
+#    "b01_scrapy_crawlspider_dsw.middlewares.B01ScrapyCrawlspiderDswSpiderMiddleware": 543,
 #}
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #DOWNLOADER_MIDDLEWARES = {
-#    "a04_scrapy_dytt.middlewares.A04ScrapyDyttDownloaderMiddleware": 543,
+#    "b01_scrapy_crawlspider_dsw.middlewares.B01ScrapyCrawlspiderDswDownloaderMiddleware": 543,
 #}
 
 # Enable or disable extensions
@@ -60,10 +60,22 @@ NEWSPIDER_MODULE = "a04_scrapy_dytt.spiders"
 #    "scrapy.extensions.telnet.TelnetConsole": None,
 #}
 
+
+# 设置MySQL保存数据
+
+DB_HOST="127.0.0.1"
+DB_PORT=3306
+DB_USER='root'
+DB_PASSWORD=''
+DB_NAME=''
+DB_CHARSET='utf8'
+
+
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   "a04_scrapy_dytt.pipelines.A04ScrapyDyttPipeline": 300,
+   "b01_scrapy_crawlspider_dsw.pipelines.B01ScrapyCrawlspiderDswPipeline": 300,
+   "b01_scrapy_crawlspider_dsw.pipelines.MysqlPipline":301
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

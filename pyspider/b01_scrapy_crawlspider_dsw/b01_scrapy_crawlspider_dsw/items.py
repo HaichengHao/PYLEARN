@@ -6,10 +6,8 @@
 import scrapy
 
 
-class A04ScrapyDyttItem(scrapy.Item):
+class B01ScrapyCrawlspiderDswItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     name = scrapy.Field()
     src = scrapy.Field()
-
-    pass

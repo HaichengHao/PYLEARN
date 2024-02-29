@@ -1,0 +1,5 @@
+与之前不同的是：
+从
+scrapy genspider 项目名 链接
+变成了
+scrapy genspider -t crawl 项目名 链接
